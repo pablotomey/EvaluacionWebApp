@@ -1,0 +1,43 @@
+#login {
+    width: 100%;
+    height: 100vh;
+}
+
+#login .card-panel {
+    max-width: 500px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+
+
+
+/* label focus color */
+
+.input-field input:focus+label {
+    color: #29b6f6 !important;
+}
+
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #29b6f6 !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input:focus {
+    border-bottom: 1px solid #29b6f6 !important;
+    box-shadow: 0 1px 0 0 #29b6f6 !important;
+}
