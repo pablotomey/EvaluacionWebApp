@@ -22,7 +22,7 @@
                         <img src="../Content/img/Logo_Hospital.png" class="responsive-img valign profile-image-login"/>
                         <p class="center">Servicio de alimentación y nutrición</p>
                     </div>
-                    <form id="form1" runat="server" class="col m6 s12 center">
+                    <form id="form1" runat="server" class="col m6 s12 center" action="User/UserDefault.aspx">
                         <div class="row center">
                             <div class="input-field col m12 s12">
                                 <i class="material-icons prefix left grey-text">perm_identity</i>
