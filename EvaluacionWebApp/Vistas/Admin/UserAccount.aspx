@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form>
         <div class="row">
             <div class="container">
                 <h5 class="grey-text">Crear cuenta de Usuario</h5>
@@ -20,48 +19,47 @@
                     </div>
                     <div class="row s12">
                         <div class="input-field col s6 m4 l4">
-                            <input type="text">
+                            <asp:TextBox runat="server" ID="txtNombreUsuario"></asp:TextBox>
                             <label for="">Nombre</label>
                         </div>
                         <div class="input-field col s6 m4 l4">
-                            <input type="text">
+                            <asp:TextBox runat="server" ID="txtApepat"></asp:TextBox>
                             <label for="">Apellido Paterno</label>
                         </div>
                         <div class="input-field col s6 m4 l4">
-                            <input type="text">
+                            <asp:TextBox runat="server" ID="txtApemat"></asp:TextBox>
                             <label for="">Apellido Materno</label>
                         </div>
                     </div>
                     <div class="row s12">
                         <div class="input-field col s6 m4 l4">
-                            <input type="text">
-                            <label for="">Edad</label>
-                        </div>
-                        <div class="input-field col s6 m4 l4">
-                            <input type="password">
-                            <label for="">Contraseña</label>
-                        </div>
-                        <div class="input-field col s6 m4 l4">
-                            <input type="text">
+                            <asp:TextBox runat="server" ID="txtRutUsuario"></asp:TextBox>
                             <label for="">Rut</label>
                         </div>
                         <div class="input-field col s6 m4 l4">
-                            <select>
-                                <option value="" disabled selected>Seleccione tipo de usuario</option>
-                                <option value="1">Administrador</option>
-                                <option value="2">Usuario</option>
-                            </select>
+                            <asp:TextBox runat="server" ID="txtLogin"></asp:TextBox>
+                            <label for="">Login</label>
+                        </div>
+                        <div class="input-field col s6 m4 l4">
+                            <asp:TextBox runat="server" ID="txtContraseña" TextMode="Password"></asp:TextBox>
+                            <label for="">Contraseña</label>
+                        </div>
+                        <div class="input-field col s6 m4 l4">
+                            <asp:DropDownList runat="server" ID="slcRol">
+                                <asp:ListItem Enabled="true" Text="Seleccionar Rol"></asp:ListItem>
+                                <asp:ListItem>Administrador</asp:ListItem>
+                                <asp:ListItem>Usuario</asp:ListItem>
+                            </asp:DropDownList>                         
                             <label>Rol</label>
                         </div>
                     </div>
                     <div class="row center">
-                        <button class="waves-effect waves-light btn blue darken-4 z-depth-4" type="submit" name="action">
-                            Guardar<i class="material-icons right">save</i>
-                        </button>
+                        <asp:Button runat="server" ID="btnGuardarUsuario" CssClass="waves-effect waves-light btn blue darken-4 z-depth-4" Text="Guardar"/>
                     </div>
                 </div>
             </div>
-            <div class="row">
+         </div>
+            <!--<div class="row">
                 <div class="container">
                     <div class="card-panel z-depth-2 ">
                         <label>
@@ -110,6 +108,5 @@
                         </table>
                     </div>
                 </div>
-            </div>
-    </form>
+            </div>-->
 </asp:Content>

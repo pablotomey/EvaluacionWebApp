@@ -289,6 +289,128 @@
                 <div class="row">
                     <i class="material-icons small blue-text">straighten</i>
                     <label>
+                        <h6>Requerimentos</h6>
+                    </label>
+                </div>
+                <div class="row s12">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtInicio"></asp:TextBox>
+                        <label for="">Inicio %</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtKcalInicio"></asp:TextBox>
+                        <label for="">Kcal</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:DropDownList runat="server" ID="slcFactorCalInicio">
+                            <asp:ListItem Enabled="true" Text="Kcal/kg"></asp:ListItem>
+                            <asp:ListItem>20</asp:ListItem>
+                            <asp:ListItem>25</asp:ListItem>
+                            <asp:ListItem>28</asp:ListItem>
+                            <asp:ListItem>30</asp:ListItem>
+                        </asp:DropDownList>
+                        <label for="">Factor</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtCHOPorcInicio"></asp:TextBox>
+                        <label for="">CHO %</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtCHOGrInicio"></asp:TextBox>
+                        <label for="">gr</label>
+                    </div>
+                </div>
+                <div class="row s12">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtProtInicio"></asp:TextBox>
+                        <label for="">Prot</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:DropDownList runat="server" ID="slcFactorProtInicio">
+                            <asp:ListItem Enabled="true" Text="gr/kg"></asp:ListItem>
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>1,2</asp:ListItem>
+                            <asp:ListItem>1,3</asp:ListItem>
+                            <asp:ListItem>1,5</asp:ListItem>
+                        </asp:DropDownList>
+                        <label for="">Factor</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtLIPPorcInicio"></asp:TextBox>
+                        <label>LIP %</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtLIPGrInicio"></asp:TextBox>
+                        <label>gr</label>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <!--REQUERIMIENTOS DE TERMINO-->
+                <div class="row s12">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtTermino"></asp:TextBox>
+                        <label for="">Termino %</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtKcalTermino"></asp:TextBox>
+                        <label for="">Kcal</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:DropDownList runat="server" ID="slcFactorKcalTermino">
+                            <asp:ListItem Enabled="true" Text="Kcal/kg"></asp:ListItem>
+                            <asp:ListItem>20</asp:ListItem>
+                            <asp:ListItem>25</asp:ListItem>
+                            <asp:ListItem>28</asp:ListItem>
+                            <asp:ListItem>30</asp:ListItem>
+                        </asp:DropDownList>
+                        <label for="">Factor</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtCHOPorcTermino"></asp:TextBox>
+                        <label for="">CHO %</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtCHOGrTermino"></asp:TextBox>
+                        <label for="">gr</label>
+                    </div>
+                </div>
+                <div class="row s12">
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtProtTermino"></asp:TextBox>
+                        <label for="">Prot</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:DropDownList runat="server" ID="slcFactorProtTermino">
+                            <asp:ListItem Enabled="True" Text="gr/kg"></asp:ListItem>
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>1,2</asp:ListItem>
+                            <asp:ListItem>1,3</asp:ListItem>
+                            <asp:ListItem>1,5</asp:ListItem>
+                        </asp:DropDownList>
+                        <label for="">Factor</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtLIPPorcTermino"></asp:TextBox>
+                        <label>LIP %</label>
+                    </div>
+                    <div class="input-field col s6 m3 l3">
+                        <asp:TextBox runat="server" ID="txtLIPGrTermino"></asp:TextBox>
+                        <label>gr</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="card-panel">
+                <div class="row">
+                    <i class="material-icons small blue-text">straighten</i>
+                    <label>
                         <h6>Meta Nutricional (Sin BN)</h6>
                     </label>
                 </div>
