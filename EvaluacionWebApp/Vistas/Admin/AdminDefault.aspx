@@ -4,38 +4,53 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="section"></div>
-    <div class="row col l12">
+    <div class="row">
         <div class="container">
-            <div class="card-panel orange col l6">
-                <div class="card-content white-text">
-                    <div class="row center">
-                        <i class="material-icons large">supervisor_account</i>
-                    </div>
-                    <h5 class="card-title center">Control de cuentas de usuario en el sistema</h5>
-                    <div class="divider"></div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Cuentas activas en el sistema</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+            <div class="col l4 s12 m12">
+                <div class="card-panel orange">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">supervisor_account</i>
                         </div>
+                        <h5 class="card-title center">Control de cuentas activas en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountCuentas" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div>                       
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Cuentas inactivas en el sistema</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+                </div>
+            </div>
+            <div class="col l4 s12 m12">
+                <div class="card-panel  red darken-1">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">account_box</i>
                         </div>
+                        <h5 class="card-title center">Cuentas admin en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountAdmin" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Cuentas admin</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+                </div>
+            </div>
+            <div class="col l4 s12 m12">
+                <div class="card-panel indigo darken-1">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">account_circle</i>
                         </div>
+                        <h5 class="card-title center">Control de cuentas de usuario en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountUser" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>

@@ -26,26 +26,27 @@
                         <div class="row center">
                             <div class="input-field col m12 s12">
                                 <i class="material-icons prefix left grey-text">perm_identity</i>
-                                <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>                               
-                                <label>Rut</label>
+                                <!--Control para enviar el Username del usuario-->
+                                <asp:TextBox ID="txtUseName" runat="server"></asp:TextBox>                               
+                                <label>Nombre de usuario</label>
                             </div>
                         </div>
                         <div class="row center">
                             <div class="input-field col m12 s12">
                                 <i class="material-icons prefix left grey-text">lock_outline</i>
-                                <asp:TextBox ID="txtClave" runat="server" type="password"></asp:TextBox>
+                                <!--Control para enviar el password del usaurio-->
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                                 <label>Password</label>
                             </div>
                         </div>
                         <div class="center">                           
-                            <asp:Button ID="btnIngresar" cssClass="waves-effect waves-light btn blue darken-4 z-depth-4 white-text" runat="server" Text="Ingresar"/>
+                            <asp:Button ID="btnIngresar" cssClass="waves-effect waves-light btn blue darken-4 z-depth-4" runat="server" Text="Ingresar"/>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!--Comentario para probar Github-->
     <!--Import jQuery before materialize.js-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../Content/js/materialize.min.js"></script>

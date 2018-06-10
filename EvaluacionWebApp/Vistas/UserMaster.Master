@@ -16,8 +16,8 @@
 
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form runat="server">
+<body class="grey lighten-4">
+    <form runat="server" id="FormUsuario">
     <asp:ScriptManager runat="server">
         <scripts>
             <asp:ScriptReference Path  ="~/Content/js/materialize.min.js" />
@@ -29,7 +29,7 @@
         <div class="navbar-fixed">
             <nav class="blue darken-4">
                 <div class="nav-wrapper">                   
-                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">menu</i></a>                    
+                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">menu</i></a>
                     <ul>                       
                         <li><h5>Hospital clínico Magallanes</h5></li>                       
                     </ul>
@@ -55,13 +55,10 @@
         <li><a href="/Vistas/User/Evaluacion.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Evaluacion Nutricional</a></li>
         <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
         <li><a href="/Vistas/Login.aspx" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Salir</a></li>
-    </ul>
-    </form>
-        <main class="grey lighten-4">
-            <div>
+    </ul>    
+        <main class="grey lighten-4">            
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
+                </asp:ContentPlaceHolder>            
         </main>
     <footer class="page-footer blue-grey darken-3">
         <div class="container">
@@ -79,5 +76,6 @@
             </div>
         </div>
     </footer>
+        </form>
 </body>
 </html>

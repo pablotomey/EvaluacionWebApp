@@ -4,38 +4,53 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="section"></div>
-    <div class="row col l12">
+    <div class="row">
         <div class="container">
-            <div class="card-panel light-blue lighten-1 col l6">
-                <div class="card-content white-text">
-                    <div class="row center">
-                        <i class="material-icons large">supervisor_account</i>
-                    </div>
-                    <h5 class="card-title center">Control de pacientes en el sistema</h5>
-                    <div class="divider"></div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Pacientes activos en el sistema</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+            <div class="col l4 s12 m12">
+                <div class="card-panel blue darken-1">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">content_paste</i>
                         </div>
+                        <h5 class="card-title center">Evaluaciones en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountCuentas" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div>                       
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Pacientes inactivos en el sistema</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+                </div>
+            </div>
+            <div class="col l4 s12 m12">
+                <div class="card-panel  purple darken-1">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">airline_seat_flat</i>
                         </div>
+                        <h5 class="card-title center">Pacientes ingresados activos en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountAdmin" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <a href="#" class="col l6">
-                                <h6 class="white-text">Evaluaciones nutricionales</h6>
-                            </a>
-                            <h5 class="col l4">0</h5>
+                </div>
+            </div>
+            <div class="col l4 s12 m12">
+                <div class="card-panel yellow darken-1">
+                    <div class="card-content white-text">
+                        <div class="row center">
+                            <i class="material-icons large">accessibility</i>
                         </div>
+                        <h5 class="card-title center">Pacientes de alta en el sistema</h5>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="container center">
+                                <asp:Label runat="server" ID="lblCountUser" CssClass="large"><h4>0</h4></asp:Label>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
