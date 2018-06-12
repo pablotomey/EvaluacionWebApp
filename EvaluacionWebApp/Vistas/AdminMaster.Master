@@ -16,70 +16,67 @@
     </asp:ContentPlaceHolder>
 </head>
 <body class="grey lighten-4">
-    <form runat="server" id="formAdmin">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <asp:ScriptReference Path="~/Content/js/materialize.min.js" />
-                <asp:ScriptReference Path="https://code.jquery.com/jquery-3.3.1.min.js" />
-                <asp:ScriptReference Path="~/Content/js/appScript.js" />
-            </Scripts>
-        </asp:ScriptManager>
-        <header>
-            <div class="navbar-fixed">
-                <nav class="blue darken-4">
-                    <div class="nav-wrapper">
-                        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">menu</i></a>
-                        <ul>
-                            <li>
-                                <h5>Hospital clínico Magallanes</h5>
-                            </li>
-                        </ul>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="#!"><i class="material-icons left">account_circle</i>Usuario</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <ul id="slide-out" class="sidenav">
-            <li>
-                <div class="center">
-                    <div class="">
-                        <img src="/Content/img/Logo_Hospital.png" style="padding-top: 5px" />
-                    </div>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="blue darken-4">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">menu</i></a>
+                    <ul>
+                        <li>
+                            <h5>Hospital clínico Magallanes</h5>
+                        </li>
+                    </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#!"><i class="material-icons left">account_circle</i>Usuario</a></li>
+                    </ul>
                 </div>
-            </li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a href="/Vistas/Admin/AdminDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
-            <li><a href="/Vistas/Admin/UserAccount.aspx" class="waves-effect waves-teal"><i class="material-icons">person_add</i>Crear Cuenta de usuario</a></li>
-            <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">important_devices</i>Administrar Cuentas</a></li>
-            <li><a href="/Vistas/Login.aspx" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Salir</a></li>
-        </ul>
-
-        <main>
-            <div>
+            </nav>
+        </div>
+    </header>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="center">
+                <div class="">
+                    <img src="/Content/img/Logo_Hospital.png" style="padding-top: 5px" />
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="/Vistas/Admin/AdminDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
+        <li><a href="/Vistas/Admin/UserAccount.aspx" class="waves-effect waves-teal"><i class="material-icons">person_add</i>Crear Cuenta de usuario</a></li>
+        <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">important_devices</i>Administrar Cuentas</a></li>
+        <li><a href="/Vistas/Login.aspx" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Salir</a></li>
+    </ul>
+    <main>
+        <form runat="server" id="formAdmin">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <asp:ScriptReference Path="~/Content/js/materialize.min.js" />
+                    <asp:ScriptReference Path="https://code.jquery.com/jquery-3.3.1.min.js" />
+                    <asp:ScriptReference Path="~/Content/js/appScript.js" />
+                </Scripts>
+            </asp:ScriptManager>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
+        </form>
+    </main>
+    <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h6 class="white-text">Desarrollado por:</h6>
+                    <p class="grey-text text-lighten-4">Pablo Tomey, Monica Alvarez, Cristian Jara</p>
+                </div>
             </div>
-        </main>
-        <footer class="page-footer blue-grey darken-3">
+        </div>
+        <div class="footer-copyright blue-grey darken-4">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h6 class="white-text">Desarrollado por:</h6>
-                        <p class="grey-text text-lighten-4">Pablo Tomey, Monica Alvarez, Cristian Jara</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright blue-grey darken-4">
-                <div class="container">
-                    © 2018 Nutrideath
+                © 2018 Nutrideath
                 <a class="grey-text text-lighten-4 right" href="#!">Inacap</a>
-                </div>
             </div>
-        </footer>
-    </form>
+        </div>
+    </footer>
 </body>
 </html>
