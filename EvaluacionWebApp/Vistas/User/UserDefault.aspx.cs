@@ -11,7 +11,23 @@ namespace EvaluacionWebApp.Vistas.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                String typeRol = Session["rol"].ToString();
+                if (!typeRol.Equals("usuario"))
+                {
+                    Response.Redirect("../Login.aspx");
+                }
+                else
+                {
 
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("../Login.aspx");
+                throw;
+            }
         }
     }
 }

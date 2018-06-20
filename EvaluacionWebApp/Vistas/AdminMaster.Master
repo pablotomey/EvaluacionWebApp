@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../Content/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="../Content/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
@@ -27,7 +28,7 @@
                         </li>
                     </ul>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#!"><i class="material-icons left">account_circle</i>Usuario</a></li>
+                        <li><a href="#!"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSession"></asp:Label></a></li>
                     </ul>
                 </div>
             </nav>
@@ -47,15 +48,17 @@
         <li><a href="/Vistas/Admin/AdminDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
         <li><a href="/Vistas/Admin/UserAccount.aspx" class="waves-effect waves-teal"><i class="material-icons">person_add</i>Crear Cuenta de usuario</a></li>
         <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">important_devices</i>Administrar Cuentas</a></li>
-        <li><a href="/Vistas/Login.aspx" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Salir</a></li>
+        <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
+    
     <main>
         <form runat="server" id="formAdmin">
             <asp:ScriptManager runat="server">
                 <Scripts>
                     <asp:ScriptReference Path="~/Content/js/materialize.min.js" />
-                    <asp:ScriptReference Path="https://code.jquery.com/jquery-3.3.1.min.js" />
+                    <asp:ScriptReference Path="~/scripts/jquery-3.3.1.min.js" />
                     <asp:ScriptReference Path="~/Content/js/appScript.js" />
+                    <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" />
                 </Scripts>
             </asp:ScriptManager>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -77,6 +80,6 @@
                 <a class="grey-text text-lighten-4 right" href="#!">Inacap</a>
             </div>
         </div>
-    </footer>
+    </footer>        
 </body>
 </html>

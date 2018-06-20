@@ -14,7 +14,7 @@
     <title>Login</title>
 </head>
 <body>
-    <div id="login" class="blue-grey lighten-2 valign-wrapper">
+    <div id="login" class="blue-grey lighten-2 valign-wrapper">        
         <div class="row">
             <div class="card-panel z-depth-4">
                 <div class="row">
@@ -22,12 +22,13 @@
                         <img src="../Content/img/Logo_Hospital.png" class="responsive-img valign profile-image-login"/>
                         <p class="center">Servicio de alimentación y nutrición</p>
                     </div>
-                    <form id="form1" runat="server" class="col m6 s12 center" action="User/UserDefault.aspx">
+                    <form id="form1" runat="server" class="col m6 s12 center">
                         <div class="row center">
                             <div class="input-field col m12 s12">
                                 <i class="material-icons prefix left grey-text">perm_identity</i>
                                 <!--Control para enviar el Username del usuario-->
-                                <asp:TextBox ID="txtUseName" runat="server"></asp:TextBox>                               
+                                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Requerido" ForeColor="Red" ControlToValidate="txtUserName"></asp:RequiredFieldValidator>                               
                                 <label>Nombre de usuario</label>
                             </div>
                         </div>
@@ -36,11 +37,15 @@
                                 <i class="material-icons prefix left grey-text">lock_outline</i>
                                 <!--Control para enviar el password del usaurio-->
                                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Requerido" ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                                 <label>Password</label>
                             </div>
                         </div>
                         <div class="center">                           
-                            <asp:Button ID="btnIngresar" cssClass="waves-effect waves-light btn blue darken-4 z-depth-4" runat="server" Text="Ingresar"/>
+                            <asp:Button ID="btnIngresar" cssClass="waves-effect waves-light btn blue darken-4 z-depth-4" runat="server" Text="Ingresar" OnClick="btnIngresar_Click1"/>
+                        </div>
+                        <div class="center">
+                            <asp:Label runat="server" ID="lblResultado" ForeColor="Red"></asp:Label>
                         </div>
                     </form>
                 </div>

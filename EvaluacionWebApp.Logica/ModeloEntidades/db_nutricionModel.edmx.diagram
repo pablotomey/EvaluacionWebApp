@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0a77f5fbee72468f8317dd68b315136e" Name="Diagram1">
+        <EntityTypeShape EntityType="db_nutricionModel.Evaluaciones" Width="1.5" PointX="6.125" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_nutricionModel.Pacientes" Width="1.5" PointX="3.625" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_nutricionModel.Requerimientos" Width="1.5" PointX="8.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_nutricionModel.Roles" Width="1.5" PointX="1" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_nutricionModel.Usuarios" Width="1.5" PointX="1" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="db_nutricionModel.FK_EVALUACIONES_REQUERIMIENTOS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_nutricionModel.FK_PACIENTES_EVALUACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="db_nutricionModel.FK_USUARIOS_EVALUACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="db_nutricionModel.FK_USUARIO_PACIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="db_nutricionModel.FK_ROLES_USUARIOS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

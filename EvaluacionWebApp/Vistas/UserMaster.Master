@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="/Vistas/Admin/AdminDefault.aspx"><i class="material-icons left">account_circle</i>Usuario</a></li>
+                        <li><a href="/Vistas/Admin/AdminDefault.aspx"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSesion"></asp:Label></a></li>
                     </ul>
                 </div>
             </nav>
@@ -47,14 +47,14 @@
         <li><a href="/Vistas/User/UserDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
         <li><a href="/Vistas/User/Evaluacion.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Evaluacion Nutricional</a></li>
         <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
-        <li><a href="/Vistas/Login.aspx" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Salir</a></li>
+        <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
     <main>
         <form runat="server" id="formUser">
             <asp:ScriptManager runat="server">
                 <Scripts>
                     <asp:ScriptReference Path="~/Content/js/materialize.min.js" />
-                    <asp:ScriptReference Path="https://code.jquery.com/jquery-3.3.1.min.js" />
+                    <asp:ScriptReference Path="~/scripts/jquery-3.3.1.min.js" />
                     <asp:ScriptReference Path="~/Content/js/appScript.js" />
                 </Scripts>
             </asp:ScriptManager>
