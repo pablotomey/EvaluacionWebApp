@@ -15,7 +15,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body class="grey lighten-4">
+<body class="grey lighten-5">
     <header>
         <div class="navbar-fixed">
             <nav class="blue darken-4">
@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="/Vistas/Admin/AdminDefault.aspx"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSesion"></asp:Label></a></li>
+                        <li><a href="/Vistas/Admin/AdminDefault.aspx"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSession"></asp:Label></a></li>
                     </ul>
                 </div>
             </nav>

@@ -9,12 +9,18 @@ namespace EvaluacionWebApp.Vistas
 {
     public partial class AdminMaster : System.Web.UI.MasterPage
     {
+        /**
+         * Valida la session de usuario y carga el usuername en el navbar.
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
             lblUserSession.Text = Session["usuario"].ToString();
         }
         
-        //Metodo que ciera la sesion de usaurio y devuelve al login, esta vinculado al elemento HTML <a href (salir)> con la propiedad OnServerClick
+        /**
+         * Metodo que cierra la sesion de usuario y devuelve al login, esta vinculado al elemento HTML 
+         * <a> con la propiedad OnServerClick
+         */
         protected void cerrarSession(object sender, EventArgs e)
         {
             Session.Remove("rol");

@@ -51,7 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\clsPaciente.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
+    <Compile Include="Interfaces\PacientesInterface.cs" />
+    <Compile Include="Interfaces\UsuariosInterface.cs" />
     <Compile Include="ModeloEntidades\db_nutricionModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

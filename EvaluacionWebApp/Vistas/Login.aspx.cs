@@ -16,19 +16,24 @@ namespace EvaluacionWebApp.Vistas
         {
             
         }
-
+        /**
+         * Evento click el cual permite el ingreso del usario al la aplicación mediante el ingreso de su
+         * username y password.
+         * Ademas entrega variables de session.
+         */
         protected void btnIngresar_Click1(object sender, EventArgs e)
         {
             clsUsuario usuario = new clsUsuario();
-            int rol= usuario.validarUsuario(txtUserName.Text, txtPassword.Text);
+            String userName = txtUserName.Text;
+            String password=txtPassword.Text;
 
-            if (rol == 1)
+            if (usuario.validarUsuario(userName,password) == 1)
             {
                 Session["rol"] = "administrador";
                 Session["usuario"] = txtUserName.Text;
                 Response.Redirect("../Vistas/Admin/AdminDefault.aspx");
             }
-            else if (rol==2)
+            else if (usuario.validarUsuario(userName,password)==2)
             {
                 Session["rol"] = "usuario";
                 Session["usuario"] = txtUserName.Text;

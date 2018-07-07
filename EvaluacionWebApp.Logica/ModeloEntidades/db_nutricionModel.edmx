@@ -98,7 +98,7 @@
           <Property Name="apepat" Type="varchar" MaxLength="25" />
           <Property Name="apemat" Type="varchar" MaxLength="25" />
           <Property Name="estado" Type="varchar" MaxLength="8" />
-          <Property Name="fecha_creacion" Type="date" />
+          <Property Name="fecha_creacion" Type="smalldatetime" />
           <Property Name="login" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="contraseña" Type="varbinary" MaxLength="8000" Nullable="false" />
           <Property Name="id_rol" Type="int" Nullable="false" />
@@ -173,7 +173,7 @@
           <Parameter Name="rut" Type="int" Mode="In" />
           <Parameter Name="apepat" Type="varchar" Mode="In" />
           <Parameter Name="apemat" Type="varchar" Mode="In" />
-          <Parameter Name="fecha_creacion" Type="date" Mode="In" />
+          <Parameter Name="fecha_creacion" Type="smalldatetime" Mode="In" />
           <Parameter Name="login" Type="varchar" Mode="In" />
           <Parameter Name="contraseña" Type="varchar(max)" Mode="In" />
           <Parameter Name="id_rol" Type="int" Mode="In" />

@@ -16,7 +16,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body class="grey lighten-4">
+<body class="grey lighten-5">
     <header>
         <div class="navbar-fixed">
             <nav class="blue darken-4">
@@ -47,18 +47,17 @@
         </li>
         <li><a href="/Vistas/Admin/AdminDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
         <li><a href="/Vistas/Admin/UserAccount.aspx" class="waves-effect waves-teal"><i class="material-icons">person_add</i>Crear Cuenta de usuario</a></li>
-        <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">important_devices</i>Administrar Cuentas</a></li>
+        <li><a href="/Vistas/Admin/AdminAccount.aspx" class="waves-effect waves-teal"><i class="material-icons">important_devices</i>Administrar Cuentas</a></li>
         <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
     
     <main>
         <form runat="server" id="formAdmin">
-            <asp:ScriptManager runat="server">
+            <asp:ScriptManager runat="server" ID="Scriptmanager1">
                 <Scripts>
                     <asp:ScriptReference Path="~/Content/js/materialize.min.js" />
                     <asp:ScriptReference Path="~/scripts/jquery-3.3.1.min.js" />
                     <asp:ScriptReference Path="~/Content/js/appScript.js" />
-                    <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" />
                 </Scripts>
             </asp:ScriptManager>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

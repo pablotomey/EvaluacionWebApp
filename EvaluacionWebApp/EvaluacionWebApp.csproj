@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\EntityFramework.dll</HintPath>
     </Reference>
@@ -83,6 +86,9 @@
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff2" />
     <None Include="packages.config" />
+    <Content Include="Content\img\eliminar.png" />
+    <Content Include="Content\img\Evaluacion.png" />
+    <Content Include="Content\img\modificar.png" />
     <Content Include="Content\js\appScript.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Global.asax" />
@@ -90,6 +96,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Vistas\Admin\AdminAccount.aspx" />
     <Content Include="Vistas\Admin\AdminDefault.aspx" />
     <Content Include="Vistas\Admin\UserAccount.aspx" />
     <Content Include="Vistas\UserMaster.Master" />
@@ -126,6 +133,13 @@
     </Compile>
     <Compile Include="Vistas\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin\AdminAccount.aspx.cs">
+      <DependentUpon>AdminAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin\AdminAccount.aspx.designer.cs">
+      <DependentUpon>AdminAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Admin\AdminDefault.aspx.cs">
       <DependentUpon>AdminDefault.aspx</DependentUpon>

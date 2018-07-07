@@ -16,7 +16,7 @@
                         <div class="divider"></div>
                         <div class="row">
                             <div class="container center">
-                                <asp:Label runat="server" ID="lblCountCuentas" CssClass="large"><h4>0</h4></asp:Label>
+                                <h4><asp:Label runat="server" ID="lblCountCuentas" CssClass="large"></asp:Label></h4>
                             </div>
                         </div>                       
                     </div>
@@ -32,7 +32,7 @@
                         <div class="divider"></div>
                         <div class="row">
                             <div class="container center">
-                                <asp:Label runat="server" ID="lblCountAdmin" CssClass="large"><h4>0</h4></asp:Label>
+                                <h4><asp:Label runat="server" ID="lblCountAdmin" CssClass="large"></asp:Label></h4>
                             </div>
                         </div> 
                     </div>
@@ -48,7 +48,7 @@
                         <div class="divider"></div>
                         <div class="row">
                             <div class="container center">
-                                <asp:Label runat="server" ID="lblCountUser" CssClass="large"><h4>0</h4></asp:Label>
+                                <h4><asp:Label runat="server" ID="lblCountUser" CssClass="large"></asp:Label></h4>
                             </div>
                         </div> 
                     </div>

@@ -40,6 +40,15 @@ namespace EvaluacionWebApp.Vistas {
         protected global::System.Web.UI.HtmlControls.HtmlForm formAdmin;
         
         /// <summary>
+        /// Control Scriptmanager1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager Scriptmanager1;
+        
+        /// <summary>
         /// Control ContentPlaceHolder1.
         /// </summary>
         /// <remarks>
