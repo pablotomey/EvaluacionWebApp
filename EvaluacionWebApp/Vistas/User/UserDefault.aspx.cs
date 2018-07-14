@@ -119,7 +119,22 @@ namespace EvaluacionWebApp.Vistas.User
          */
         protected void grdTablaPacientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            try
+            {
+                int indice = Convert.ToInt32(e.CommandArgument);
 
+                if (e.CommandName == "Evaluacion")
+                {
+                    String id = ((Label)grdTablaPacientes.Rows[indice].FindControl("lblIdPaciente")).Text;
+                    Response.Redirect("Evaluacion.aspx?idPaciente="+id);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         /**

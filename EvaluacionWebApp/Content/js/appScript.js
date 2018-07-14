@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.FormSelect.init(elems, '');
 });
 
-function lanzarModalPacientes() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    $find('biModalAgregarPaciente').show();
-}
+    var elem = document.querySelector('.collapsible.expandable');
+    var instance = M.Collapsible.init(elem, {
+        accordion: false
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, '.open()');
+});
+

@@ -91,6 +91,7 @@
     <Content Include="Content\img\modificar.png" />
     <Content Include="Content\js\appScript.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Content\js\calculosEvaluacion.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -189,6 +190,9 @@
       <Project>{ed282d79-5f1a-4b2b-a0e5-85a9dbf40f6f}</Project>
       <Name>EvaluacionWebApp.Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

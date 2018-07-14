@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\clsEvaluacion.cs" />
     <Compile Include="Clases\clsPaciente.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Interfaces\PacientesInterface.cs" />

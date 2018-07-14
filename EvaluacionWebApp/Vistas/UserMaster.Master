@@ -15,7 +15,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body class="grey lighten-5">
+<body class="white">
     <header>
         <div class="navbar-fixed">
             <nav class="blue darken-4">
@@ -45,7 +45,7 @@
             <div class="divider"></div>
         </li>
         <li><a href="/Vistas/User/UserDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
-        <li><a href="/Vistas/User/Evaluacion.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Evaluacion Nutricional</a></li>
+        <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Evaluacion Nutricional</a></li>
         <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
         <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
