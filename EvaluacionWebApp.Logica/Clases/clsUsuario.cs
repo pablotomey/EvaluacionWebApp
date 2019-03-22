@@ -16,6 +16,7 @@ namespace EvaluacionWebApp.Logica.Clases
         /**
          * Metodo para guardar un usuario en el sistema, en primera instancia, valida si no
          * hay un rut igual registrado previamente, si no es asi, guarda el registro del usuario.
+         * Se utiliza el procedimiento almacenado RegistrarUsuario para guardar la información
          */
         public String guardarUsuario(String nombre, int rut,String apepat,String apemat,DateTime fecha,
                                      String login,String contraseña,int id_rol)
@@ -334,7 +335,7 @@ namespace EvaluacionWebApp.Logica.Clases
 
                     foreach (var find in cuentasAdmin)
                     {
-                        // Recoremos la tabla Usuarios y los que tengan id_rol = 2 son user, aumenta el contador en 1.
+                        // Recorremos la tabla Usuarios y los que tengan id_rol = 2 son user, aumenta el contador en 1.
                         if (find == 2)
                         {
                             contador++;

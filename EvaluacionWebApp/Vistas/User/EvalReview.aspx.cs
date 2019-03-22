@@ -13,6 +13,7 @@ namespace EvaluacionWebApp.Vistas.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Se validan las variables de session desde el logeo de la aplicación
             try
             {
                 String typeRol = Session["rol"].ToString();
@@ -36,7 +37,7 @@ namespace EvaluacionWebApp.Vistas.User
         {
             clsPaciente paciente = new clsPaciente();
             
-
+            // guardamos en una vaiable el string que devuelve el metodo validar rut
             String rut = paciente.validarRut(txtRutFind.Text);
 
             if (rut.Equals("Rut invalido"))
@@ -53,6 +54,7 @@ namespace EvaluacionWebApp.Vistas.User
             
                 int rutPaciente = Convert.ToInt32(rut);
 
+                // Si el rut es valido validamos en la base de datos si esta registrado
                 try
                 {
                     using (db_nutricionEntities dbentity = new db_nutricionEntities())
@@ -79,7 +81,7 @@ namespace EvaluacionWebApp.Vistas.User
                                                   where pat.rut == rutPaciente
                                                   select pat.nombre + " " + pat.apepat).First();
 
-                            lblPacienteFind.Text = "Paciente: " + nomPaciente;
+                            lblPacienteFind.Text = "Paciente: " + nomPaciente; // llenamos el label con el nombre del paciente mediante la consulta a la BD
                         }
                         else
                         {
@@ -94,6 +96,7 @@ namespace EvaluacionWebApp.Vistas.User
                     throw ex;
                 }
 
+                // Si el rut esta registrado se llaman a los metodos mostrar de la clase evaluación para consultar la evaluación nutricional del paciente
                 grdAntropometria.DataSource = evaluacion.mostrarAntropometria(rutPaciente);
                 grdAntropometria.DataBind();
                 lblTitleAntr.Visible = true;

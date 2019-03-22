@@ -78,6 +78,7 @@ namespace EvaluacionWebApp.Vistas.User
 
             String rut = paciente.validarRut(txtRutPaciente.Text);
 
+            // Validamos el rut
             if (rut.Equals("Rut invalido"))
             {
                 lblRutInvalido.Text = rut;
@@ -88,6 +89,7 @@ namespace EvaluacionWebApp.Vistas.User
                 lblRutInvalido.Text = "";
             }
 
+            // Verificamos si los campos no vienen vacios
             if (nomPaciente == "" || apepatPaciente == "" || apematPaciente == "" || edadPaciente == "" || numFicha == "" || diagnosticoPaciente == "" || rut.Equals("Rut invalido"))
             {
                 lblResultado.Text = "Complete los campos requeridos(*)";
@@ -95,11 +97,12 @@ namespace EvaluacionWebApp.Vistas.User
             }
             else
             {
+                //Guardamos al paciente en la base de datos
                 paciente.guardarPaciente(nomPaciente, apepatPaciente, apematPaciente, Convert.ToInt32(rut),
                                          Convert.ToInt32(edadPaciente), sexo, diagnosticoPaciente, Convert.ToInt32(numFicha), fecha, idUser());
                 modalAddPaciente.Hide();
                 limpiar();
-                updateGrid_Click(updateGrid, new EventArgs());
+                updateGrid_Click(updateGrid, new EventArgs()); // Actualizamos el gridTable con los pacientes registrados despues de guardar
             }
         }
 
@@ -126,6 +129,7 @@ namespace EvaluacionWebApp.Vistas.User
                 if (e.CommandName == "Evaluacion")
                 {
                     String id = ((Label)grdTablaPacientes.Rows[indice].FindControl("lblIdPaciente")).Text;
+                    // Enviamos una QueryString con el id del paciente el cual es necesario para los metodos de guardado de la evaluacion nutricional
                     Response.Redirect("Evaluacion.aspx?idPaciente="+id);
                     
                 }

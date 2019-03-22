@@ -175,6 +175,7 @@ namespace EvaluacionWebApp.Vistas.User
                 //Rescatamos el id del paciente desde la queryString creada en el proceso de registro del paciente
                 int idPaciente= Convert.ToInt32(Request.QueryString["idPaciente"]);
 
+                //validamos si los campos no vienen vacios, y guardamos la evaluación nutricional en la BD
                 if(fecha=="" || peso=="" || talla=="" || ddlFactor.SelectedValue=="0" || ddlDiagnNut.SelectedValue=="0" || txtDiagNut.Text=="" || ddlFactorKcal.SelectedValue=="0" 
                     || ddlFactorProtInicio.SelectedValue=="0" || choPorc=="" || lipPorcInicial=="" || ddlFactorKcalTermino.SelectedValue=="0" || ddlFactorProtTermino.SelectedValue=="0"
                     || choPorcFinal=="" || lipPorcFinal=="")
@@ -201,7 +202,7 @@ namespace EvaluacionWebApp.Vistas.User
             }
         }
 
-        /* Para guardar la evaluaciòn y al nutricionista encargado, sacamos su id desde su variable de session donde tenemos
+        /* Para guardar y vincular la evaluaciòn con el nutricionista encargado, sacamos su id desde su variable de session donde tenemos
          * su username, este dato lo usamos en la función idUsuario para consultar el id y vincularlo en la funcion guardarEvaluacion
         */
         public int idUser()

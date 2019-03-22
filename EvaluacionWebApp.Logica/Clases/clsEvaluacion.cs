@@ -100,9 +100,9 @@ namespace EvaluacionWebApp.Logica.Clases
                         Evaluaciones =evaluacion
                     };
 
-                    dbEntity.Evaluaciones.Add(evaluacion);
-                    dbEntity.Requerimientos.Add(requerimientoInicial);
-                    dbEntity.Requerimientos.Add(requerimientoFinal);
+                    dbEntity.Evaluaciones.Add(evaluacion); // Guardamos Evaluación Nutricional
+                    dbEntity.Requerimientos.Add(requerimientoInicial); // Guardamos Requerimiento inicial
+                    dbEntity.Requerimientos.Add(requerimientoFinal); // Guardamos requerimiento final
                     dbEntity.SaveChanges();
                 }
             }
@@ -115,6 +115,7 @@ namespace EvaluacionWebApp.Logica.Clases
             return "Evaluación registrada exitosamente";
         }
         
+        // Metodo para mostrar los datos de antropometria del paciente, como argumento se necesita el rut
         public List<EvaluacionesInterface> mostrarAntropometria(int rutPaciente)
         {
             using(db_nutricionEntities dbEntity=new db_nutricionEntities())
@@ -137,7 +138,7 @@ namespace EvaluacionWebApp.Logica.Clases
                 return queryEvaluacion;
             }
         }
-
+        // Metodo para mostrar los datos de composicion corporal del paciente
         public List<EvaluacionesInterface> mostrarComposicion(int rutPaciente)
         {
             using (db_nutricionEntities dbEntity = new db_nutricionEntities())
@@ -166,6 +167,7 @@ namespace EvaluacionWebApp.Logica.Clases
             }
         }
 
+        // Metodo para mostrar los datos de los examenes del paciente
         public List<EvaluacionesInterface> mostrarExamenes(int rutPaciente)
         {
             using (db_nutricionEntities dbEntity = new db_nutricionEntities())
@@ -197,6 +199,7 @@ namespace EvaluacionWebApp.Logica.Clases
             }
         }
 
+        // Metodo para mostrar el diagnostico
         public List<EvaluacionesInterface> mostrarDiagNutr(int rutPaciente)
         {
             using (db_nutricionEntities dbEntity = new db_nutricionEntities())
@@ -215,6 +218,7 @@ namespace EvaluacionWebApp.Logica.Clases
             }
         }
 
+        // metodo para mostrar la meta nutricional
         public List<EvaluacionesInterface> mostrarMetaNutr(int rutPaciente)
         {
             using (db_nutricionEntities dbEntity = new db_nutricionEntities())
@@ -233,6 +237,7 @@ namespace EvaluacionWebApp.Logica.Clases
             }
         }
 
+        // Metodo para mostrar las observaciones registradas
         public List<EvaluacionesInterface> mostrarObservaciones(int rutPaciente)
         {
             using (db_nutricionEntities dbEntity = new db_nutricionEntities())
