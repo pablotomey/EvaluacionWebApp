@@ -1,0 +1,22 @@
+CREATE PROCEDURE LoginUsuario
+	@username VARCHAR(8),
+	@password VARCHAR(25),
+	@resultado VARCHAR(25) OUTPUT
+AS
+BEGIN
+	IF EXISTS
+		(SELECT login, rol  from Usuarios,Roles
+			WHERE login=@username AND CONVERT(varchar(max),DECRYPTBYPASSPHRASE('Clave nutricion',contraseña))=@password 
+			AND Usuarios.id_rol=Roles.id_rol AND rol='administrador' AND estado='activo'
+		)
+		SELECT @resultado='administrador';
+	ELSE
+	BEGIN
+	IF EXISTS
+		(SELECT login, rol  from Usuarios,Roles
+			WHERE login=@username AND CONVERT(varchar(max),DECRYPTBYPASSPHRASE('Clave nutricion',contraseña))=@password 
+			AND Usuarios.id_rol=Roles.id_rol AND rol='usuario' AND estado='activo'
+		)
+		SELECT @resultado='usuario';
+	END
+END

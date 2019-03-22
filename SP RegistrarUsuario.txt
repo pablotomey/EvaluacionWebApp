@@ -1,0 +1,35 @@
+CREATE PROCEDURE RegistrarUsuario
+	@nombre VARCHAR(25),
+	@rut int,
+	@apepat VARCHAR(25),
+	@apemat VARCHAR(25),
+	@fecha_creacion SMALLDATETIME,
+	@login VARCHAR(8),
+	@contraseña VARCHAR(MAX),
+	@id_rol int
+
+AS
+BEGIN
+	INSERT INTO Usuarios (
+		nombre,
+		rut,
+		apepat,
+		apemat,
+		estado,
+		fecha_creacion,
+		login,
+		contraseña,
+		id_rol
+	)
+	VALUES (
+		@nombre,
+		@rut,
+		@apepat,
+		@apemat,
+		'activo',
+		@fecha_creacion,
+		@login,
+		ENCRYPTBYPASSPHRASE('Clave nutricion',@contraseña),
+		@id_rol
+	)
+END
