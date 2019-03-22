@@ -53,71 +53,73 @@
   <ItemGroup>
     <Compile Include="Clases\clsEvaluacion.cs" />
     <Compile Include="Clases\clsPaciente.cs" />
+    <Compile Include="Clases\clsRequerimiento.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
+    <Compile Include="Interfaces\EvaluacionesInterface.cs" />
     <Compile Include="Interfaces\PacientesInterface.cs" />
+    <Compile Include="Interfaces\RequerimientosInterface.cs" />
     <Compile Include="Interfaces\UsuariosInterface.cs" />
-    <Compile Include="ModeloEntidades\db_nutricionModel.Context.cs">
+    <Compile Include="ModeloEntidades\db_nutricionEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_nutricionModel.Context.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloEntidades\db_nutricionModel.cs">
+    <Compile Include="ModeloEntidades\db_nutricionEntity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloEntidades\db_nutricionModel.Designer.cs">
+    <Compile Include="ModeloEntidades\db_nutricionEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_nutricionModel.edmx</DependentUpon>
+      <DependentUpon>db_nutricionEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntidades\Evaluaciones.cs">
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntidades\Pacientes.cs">
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntidades\Requerimientos.cs">
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntidades\Roles.cs">
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntidades\Usuarios.cs">
-      <DependentUpon>db_nutricionModel.tt</DependentUpon>
+      <DependentUpon>db_nutricionEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EntityDeploy Include="ModeloEntidades\db_nutricionModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>db_nutricionModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ModeloEntidades\db_nutricionModel.edmx.diagram">
-      <DependentUpon>db_nutricionModel.edmx</DependentUpon>
+    <EntityDeploy Include="ModeloEntidades\db_nutricionEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>db_nutricionEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModeloEntidades\db_nutricionEntity.edmx.diagram">
+      <DependentUpon>db_nutricionEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModeloEntidades\db_nutricionModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>db_nutricionModel.Context.cs</LastGenOutput>
-      <DependentUpon>db_nutricionModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModeloEntidades\db_nutricionModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>db_nutricionModel.edmx</DependentUpon>
-      <LastGenOutput>db_nutricionModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ModeloEntidades\db_nutricionEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_nutricionEntity.edmx</DependentUpon>
+      <LastGenOutput>db_nutricionEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModeloEntidades\db_nutricionEntity.edmx.sql" />
+    <Content Include="ModeloEntidades\db_nutricionEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_nutricionEntity.edmx</DependentUpon>
+      <LastGenOutput>db_nutricionEntity.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

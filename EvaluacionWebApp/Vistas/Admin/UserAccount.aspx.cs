@@ -26,7 +26,19 @@ namespace EvaluacionWebApp.Vistas.Admin
                     lsdRol.DataBind();
                 }
             }
-            
+
+            txtNombreUsuario.Attributes.Add("class", "validate");
+            txtNombreUsuario.Attributes.Add("pattern", "^\\s*[a-zA-ZñÑ\\s]+\\s*$");
+            txtNombreUsuario.Attributes.Add("title", "Se admiten solo letras");
+
+            txtApepat.Attributes.Add("class", "validate");
+            txtApepat.Attributes.Add("pattern", "^\\s*[a-zA-ZñÑ\\s]+\\s*$");
+            txtApepat.Attributes.Add("title", "Se admiten solo letras");
+
+            txtApemat.Attributes.Add("class", "validate");
+            txtApemat.Attributes.Add("pattern", "^\\s*[a-zA-ZñÑ\\s]+\\s*$");
+            txtApemat.Attributes.Add("title", "Se admiten solo letras");
+
         }
         /**
          * Evento Click para guardar una cuenta de usuario en el sistema
@@ -73,7 +85,6 @@ namespace EvaluacionWebApp.Vistas.Admin
                 {
                     lblConfirmacion.Text = mensaje;
                     mpeConfirmar.Show();
-                    limpiar();
                 }
             }
         }
@@ -82,13 +93,21 @@ namespace EvaluacionWebApp.Vistas.Admin
          */
         public void btnConfirmar_Click(object sender, EventArgs e)
         {
-            
-            mpeConfirmar.Hide();
-            
+            // Evaluamos mensaje devuelto por el metodo guardarUsuario(), solo si guarda corectamente, limpiamos el formulario.
+            if(lblConfirmacion.Text.Equals("El rut ingresado ya existe"))
+            {
+                mpeConfirmar.Hide();
+            }
+            else
+            {
+                mpeConfirmar.Hide();
+                limpiar();
+            }
         }
+
         /**
-         * Metodo que limpia las cajas de texto y otros controles del formulario de ingreso de usaurio
-         */
+        * Metodo que limpia las cajas de texto y otros controles del formulario de ingreso de usaurio
+        */
         public void limpiar()
         {
             txtNombreUsuario.Text = "";
@@ -97,7 +116,7 @@ namespace EvaluacionWebApp.Vistas.Admin
             txtApemat.Text = "";
             txtLogin.Text = "";
             txtContraseña.Text = "";
-            lsdRol.SelectedItem.Value = "0";
+            lsdRol.SelectedIndex = 0;
             lblResultado.Text = "";
         }
     }

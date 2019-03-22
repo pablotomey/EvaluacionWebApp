@@ -16,15 +16,15 @@ namespace EvaluacionWebApp.Logica.ModeloEntidades
     {
         public int id_requerimiento { get; set; }
         public string tipo { get; set; }
-        public Nullable<double> requerimiento { get; set; }
-        public Nullable<double> kcaloria { get; set; }
-        public Nullable<double> proteina { get; set; }
-        public Nullable<double> factor_kcal { get; set; }
-        public Nullable<double> factor_prot { get; set; }
-        public Nullable<double> cho_porc { get; set; }
-        public Nullable<double> cho_gr { get; set; }
-        public Nullable<double> lip_porc { get; set; }
-        public Nullable<double> lip_gr { get; set; }
+        public string requerimiento { get; set; }
+        public string energia { get; set; }
+        public string proteina { get; set; }
+        public string factor_kcal { get; set; }
+        public string factor_prot { get; set; }
+        public string cho_porc { get; set; }
+        public string cho_gr { get; set; }
+        public string lip_porc { get; set; }
+        public string lip_gr { get; set; }
         public int id_evaluacion { get; set; }
     
         public virtual Evaluaciones Evaluaciones { get; set; }

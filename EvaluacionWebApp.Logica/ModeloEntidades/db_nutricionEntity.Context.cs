@@ -33,6 +33,19 @@ namespace EvaluacionWebApp.Logica.ModeloEntidades
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     
+        public virtual int LoginUsuario(string username, string password, ObjectParameter resultado)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("username", username) :
+                new ObjectParameter("username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("password", password) :
+                new ObjectParameter("password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("LoginUsuario", usernameParameter, passwordParameter, resultado);
+        }
+    
         public virtual int RegistrarUsuario(string nombre, Nullable<int> rut, string apepat, string apemat, Nullable<System.DateTime> fecha_creacion, string login, string contraseña, Nullable<int> id_rol)
         {
             var nombreParameter = nombre != null ?
@@ -68,19 +81,6 @@ namespace EvaluacionWebApp.Logica.ModeloEntidades
                 new ObjectParameter("id_rol", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("RegistrarUsuario", nombreParameter, rutParameter, apepatParameter, apematParameter, fecha_creacionParameter, loginParameter, contraseñaParameter, id_rolParameter);
-        }
-    
-        public virtual int LoginUsuario(string username, string password, ObjectParameter resultado)
-        {
-            var usernameParameter = username != null ?
-                new ObjectParameter("username", username) :
-                new ObjectParameter("username", typeof(string));
-    
-            var passwordParameter = password != null ?
-                new ObjectParameter("password", password) :
-                new ObjectParameter("password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("LoginUsuario", usernameParameter, passwordParameter, resultado);
         }
     }
 }

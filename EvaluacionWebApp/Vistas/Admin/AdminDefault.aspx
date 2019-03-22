@@ -7,12 +7,12 @@
     <div class="row">
         <div class="container">
             <div class="col l4 s12 m12">
-                <div class="card-panel orange">
-                    <div class="card-content white-text">
+                <div class="card-panel white">
+                    <div class="card-content grey-text text-darken-2">
                         <div class="row center">
                             <i class="material-icons large">supervisor_account</i>
                         </div>
-                        <h5 class="card-title center">Control de cuentas activas en el sistema</h5>
+                        <h5 class="card-title center">Cuentas activas en el sistema</h5>
                         <div class="divider"></div>
                         <div class="row">
                             <div class="container center">
@@ -23,8 +23,8 @@
                 </div>
             </div>
             <div class="col l4 s12 m12">
-                <div class="card-panel  red darken-1">
-                    <div class="card-content white-text">
+                <div class="card-panel white">
+                    <div class="card-content grey-text text-darken-2">
                         <div class="row center">
                             <i class="material-icons large">account_box</i>
                         </div>
@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="col l4 s12 m12">
-                <div class="card-panel indigo darken-1">
-                    <div class="card-content white-text">
+                <div class="card-panel white">
+                    <div class="card-content grey-text text-darken-2">
                         <div class="row center">
                             <i class="material-icons large">account_circle</i>
                         </div>
-                        <h5 class="card-title center">Control de cuentas de usuario en el sistema</h5>
+                        <h5 class="card-title center">Cuentas de usuario en el sistema</h5>
                         <div class="divider"></div>
                         <div class="row">
                             <div class="container center">

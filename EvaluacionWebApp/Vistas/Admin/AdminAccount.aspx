@@ -3,60 +3,57 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row">
-        <div class="container">
-            <h5 class="grey-text">Administrar Cuentas de usuario</h5>
-        </div>
-    </div>
+
     <div class="row">
         <div class="container">
             <div class="card-panel z-depth-2">
-                <div class="section"></div>
+                <div class="row">
+                    <h5 class="grey-text text-darken-2">Administrar Cuentas de usuario</h5>
+                </div>
                 <div class="row">
                     <div class="col l8">
-                        <button runat="server" id="btnBuscarTodos" onserverclick="btnBuscarTodos_Click" class="btn waves-effect waves-light orange btn-large">
+                        <button runat="server" id="btnBuscarTodos" onserverclick="btnBuscarTodos_Click" class="btn waves-effect waves-light orange">
                             Consultar cuentas de Usuario en el sistema
                             <i class="material-icons right">group</i>
                         </button>
                     </div>
                 </div>
+                <!--Tabla de usuarios y modales con Ajax-->
+                <div class="row">
+                    <asp:GridView runat="server" ID="grdTablaUsuarios" CssClass="highlight" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" OnRowCommand="grdTablaUsuarios_RowCommand">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Id">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblIdUser" runat="server" Text='<%# Bind("id_usuario") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="rut" HeaderText="Rut" />
+                            <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="apepat" HeaderText="A.paterno" />
+                            <asp:BoundField DataField="apemat" HeaderText="A.materno" />
+                            <asp:BoundField DataField="estado" HeaderText="Estado" />
+                            <asp:BoundField DataField="fecha_creacion" HeaderText="Creación" />
+                            <asp:BoundField DataField="login" HeaderText="Username" />
+                            <asp:BoundField DataField="rol" HeaderText="Rol" />
+                            <asp:TemplateField HeaderText="Modificar">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="btnModificar" ImageUrl="~/Content/img/modificar.png" CommandName="Modificar" CommandArgument="<%#((GridViewRow) Container).RowIndex %>" />
+                                </ItemTemplate>
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Desactivar">
+                                <ItemTemplate>
+                                    <asp:ImageButton runat="server" ID="btnDesactivar" ImageUrl="~/Content/img/eliminar.png" CommandName="Desactivar" CommandArgument="<%#((GridViewRow) Container).RowIndex %>" />
+                                </ItemTemplate>
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
             </div>
         </div>
     </div>
-    <!--Tabla de usuarios y modales con Ajax-->
-    <div class="row">
-        <div class="container">
-            <asp:GridView runat="server" ID="grdTablaUsuarios" CssClass="highlight" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" OnRowCommand="grdTablaUsuarios_RowCommand">
-                <Columns>
-                    <asp:TemplateField HeaderText="Id">
-                        <ItemTemplate>
-                            <asp:Label ID="lblIdUser" runat="server" Text='<%# Bind("id_usuario") %>'></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:BoundField DataField="rut" HeaderText="Rut" />
-                    <asp:BoundField DataField="nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="apepat" HeaderText="A.paterno" />
-                    <asp:BoundField DataField="apemat" HeaderText="A.materno" />
-                    <asp:BoundField DataField="estado" HeaderText="Estado" />
-                    <asp:BoundField DataField="fecha_creacion" HeaderText="Creación" />
-                    <asp:BoundField DataField="login" HeaderText="Username" />
-                    <asp:BoundField DataField="rol" HeaderText="Rol" />
-                    <asp:TemplateField HeaderText="Modificar">
-                        <ItemTemplate>
-                            <asp:ImageButton runat="server" ID="btnModificar" ImageUrl="~/Content/img/modificar.png" CommandName="Modificar" CommandArgument="<%#((GridViewRow) Container).RowIndex %>" />
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Desactivar">
-                        <ItemTemplate>
-                            <asp:ImageButton runat="server" ID="btnDesactivar" ImageUrl="~/Content/img/eliminar.png" CommandName="Desactivar" CommandArgument="<%#((GridViewRow) Container).RowIndex %>" />
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
-        </div>
-    </div>
+
     <!-- Modal para Desactivar-->
     <asp:Label runat="server" ID="lblOculto"></asp:Label>
     <ajaxToolkit:ModalPopupExtender runat="server"

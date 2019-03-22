@@ -29,7 +29,7 @@
                                 <!--Control para enviar el Username del usuario-->
                                 <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>                               
                                 <label>Nombre de usuario</label>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Requerido" ForeColor="Red" ControlToValidate="txtUserName"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Requerido" ForeColor="Salmon" ControlToValidate="txtUserName"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="row center">
@@ -38,14 +38,14 @@
                                 <!--Control para enviar el password del usaurio-->
                                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>                                
                                 <label>Password</label>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="Requerido" ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="Requerido" ForeColor="Salmon" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                             </div>
                         </div>
-                        <div class="center">                           
-                            <asp:Button ID="btnIngresar" cssClass="waves-effect waves-light btn blue darken-4 z-depth-2" runat="server" Text="Ingresar" OnClick="btnIngresar_Click1"/>
+                        <div class="center">
+                            <button runat="server" id="btnIngresar" class="waves-effect waves-light btn blue darken-4 z-depth-2" onserverclick="btnIngresar_Click1" >Ingresar</button>
                         </div>
                         <div class="center">
-                            <asp:Label runat="server" ID="lblResultado" ForeColor="Red"></asp:Label>
+                            <asp:Label runat="server" ID="lblResultado" ForeColor="Salmon"></asp:Label>
                         </div>
                     </form>
                 </div>

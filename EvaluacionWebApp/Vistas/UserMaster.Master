@@ -45,7 +45,7 @@
             <div class="divider"></div>
         </li>
         <li><a href="/Vistas/User/UserDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
-        <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Evaluacion Nutricional</a></li>
+        <li><a href="/Vistas/User/EvalReview.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Revisar Evaluaciones</a></li>
         <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
         <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
@@ -67,14 +67,14 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h6 class="white-text">Desarrollado por:</h6>
-                    <p class="grey-text text-lighten-4">Pablo Tomey, Monica Alvarez, Cristian Jara</p>
+                    <p class="grey-text text-lighten-4">Pablo Tomey</p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright blue-grey darken-4">
             <div class="container">
-                © 2018 Nutrideath
-                <a class="grey-text text-lighten-4 right" href="#!">Inacap</a>
+                © 2018 Punta Arenas
+                <a class="grey-text text-lighten-4 right" href="#!">Hospital Clínico Magallanes</a>
             </div>
         </div>
     </footer>

@@ -25,7 +25,7 @@ namespace EvaluacionWebApp.Logica.Clases
                 using(db_nutricionEntities dbEntity=new db_nutricionEntities())
                 {
                     List<int?> rutUsuario = (from users in dbEntity.Usuarios                                      
-                                        select users.rut).ToList();
+                                             select users.rut).ToList();
 
                     bool rutMatch=false;
 
@@ -71,8 +71,8 @@ namespace EvaluacionWebApp.Logica.Clases
                 using(db_nutricionEntities dbEntity=new db_nutricionEntities())
                 {
                     Usuarios usuario = (from users in dbEntity.Usuarios
-                                     where users.id_usuario == id
-                                     select users).First();
+                                        where users.id_usuario == id
+                                        select users).First();
 
                     usuario.nombre = nombre;
                     usuario.apepat = apepat;
@@ -155,7 +155,7 @@ namespace EvaluacionWebApp.Logica.Clases
         }
         /**
          * Metodo para validar el ingreso del usuario al sistema, utiliza un procedimiento almacenado
-         * como funcion para validar el password y username, este devuelve, si hay considencia, el rol del
+         * como funcion para validar el password y username, este devuelve, si hay coinsidencia, el rol del
          * usuario.
          */
         public int validarUsuario(String username, String password)
@@ -186,10 +186,10 @@ namespace EvaluacionWebApp.Logica.Clases
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             return numRol;
         }
@@ -269,6 +269,7 @@ namespace EvaluacionWebApp.Logica.Clases
 
                     foreach (var find in cuentasActivas)
                     {
+                        // Recorremos los la tabla usuarios y los que tengan estado "activo" aumentaran el contador en 1
                         if (find == "activo")
                         {
                             contador++;
@@ -295,12 +296,13 @@ namespace EvaluacionWebApp.Logica.Clases
                 {
                     List<int> cuentasAdmin = (from users in dbEntity.Usuarios
                                               where users.estado=="activo"
-                                                   select users.id_rol).ToList();
+                                              select users.id_rol).ToList();
 
                     int contador = 0;
 
                     foreach (var find in cuentasAdmin)
                     {
+                        // Recoremos la tabla Usuarios y los que tengan id_rol = 1 son admin, aumenta el contador en 1.
                         if (find == 1)
                         {
                             contador++;
@@ -332,6 +334,7 @@ namespace EvaluacionWebApp.Logica.Clases
 
                     foreach (var find in cuentasAdmin)
                     {
+                        // Recoremos la tabla Usuarios y los que tengan id_rol = 2 son user, aumenta el contador en 1.
                         if (find == 2)
                         {
                             contador++;

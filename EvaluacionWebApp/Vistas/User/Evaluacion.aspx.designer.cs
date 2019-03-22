@@ -13,15 +13,6 @@ namespace EvaluacionWebApp.Vistas.User {
     public partial class Evaluacion {
         
         /// <summary>
-        /// Control idPaciente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idPaciente;
-        
-        /// <summary>
         /// Control txtFecha.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
+        
+        /// <summary>
+        /// Control rfvFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFecha;
         
         /// <summary>
         /// Control txtPeso.
@@ -40,6 +40,15 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.TextBox txtPeso;
         
         /// <summary>
+        /// Control rfvPeso.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPeso;
+        
+        /// <summary>
         /// Control txtTalla.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTalla;
+        
+        /// <summary>
+        /// Control rfvTalla.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTalla;
         
         /// <summary>
         /// Control txtImc.
@@ -101,6 +119,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlFactor;
+        
+        /// <summary>
+        /// Control rfvFactor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFactor;
         
         /// <summary>
         /// Control txtCB.
@@ -328,13 +355,22 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.TextBox txtOtrosEx;
         
         /// <summary>
-        /// Control slcDiagnNut.
+        /// Control ddlDiagnNut.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList slcDiagnNut;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDiagnNut;
+        
+        /// <summary>
+        /// Control rfvDiagnNut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDiagnNut;
         
         /// <summary>
         /// Control txtDiagNut.
@@ -344,6 +380,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDiagNut;
+        
+        /// <summary>
+        /// Control rfvDiagnostico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDiagnostico;
         
         /// <summary>
         /// Control txtInicio.
@@ -373,6 +418,15 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.DropDownList ddlFactorKcal;
         
         /// <summary>
+        /// Control rfvFactorKcal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFactorKcal;
+        
+        /// <summary>
         /// Control txtCHOPorcInicio.
         /// </summary>
         /// <remarks>
@@ -380,6 +434,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCHOPorcInicio;
+        
+        /// <summary>
+        /// Control rfvCHOPorcInicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCHOPorcInicio;
         
         /// <summary>
         /// Control txtCHOGrInicio.
@@ -409,6 +472,15 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.DropDownList ddlFactorProtInicio;
         
         /// <summary>
+        /// Control rfvFactorProtInicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFactorProtInicio;
+        
+        /// <summary>
         /// Control txtLIPPorcInicio.
         /// </summary>
         /// <remarks>
@@ -416,6 +488,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLIPPorcInicio;
+        
+        /// <summary>
+        /// Control rfvLIPPorcInicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLIPPorcInicio;
         
         /// <summary>
         /// Control txtLIPGrInicio.
@@ -454,6 +535,15 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.DropDownList ddlFactorKcalTermino;
         
         /// <summary>
+        /// Control rfvFactorKcalTermino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFactorKcalTermino;
+        
+        /// <summary>
         /// Control txtCHOPorcTermino.
         /// </summary>
         /// <remarks>
@@ -461,6 +551,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCHOPorcTermino;
+        
+        /// <summary>
+        /// Control rfvCHOPorcTermino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCHOPorcTermino;
         
         /// <summary>
         /// Control txtCHOGrTermino.
@@ -490,6 +589,15 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.WebControls.DropDownList ddlFactorProtTermino;
         
         /// <summary>
+        /// Control rfvDdlFactorProtTermino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDdlFactorProtTermino;
+        
+        /// <summary>
         /// Control txtLIPPorcTermino.
         /// </summary>
         /// <remarks>
@@ -497,6 +605,15 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLIPPorcTermino;
+        
+        /// <summary>
+        /// Control rfvLIPPorcTermino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLIPPorcTermino;
         
         /// <summary>
         /// Control txtLIPGrTermino.
@@ -533,5 +650,122 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnGuardarEvaluacion;
+        
+        /// <summary>
+        /// Control lblResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
+        
+        /// <summary>
+        /// Control UpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// Control pnlConfirmar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlConfirmar;
+        
+        /// <summary>
+        /// Control lblConfirmacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmacion;
+        
+        /// <summary>
+        /// Control btnConfirmar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnConfirmar;
+        
+        /// <summary>
+        /// Control lblOculto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOculto;
+        
+        /// <summary>
+        /// Control mpeConfirmar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender mpeConfirmar;
+        
+        /// <summary>
+        /// Control udpSendError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpSendError;
+        
+        /// <summary>
+        /// Control pnlSendError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlSendError;
+        
+        /// <summary>
+        /// Control lblErrorMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+        
+        /// <summary>
+        /// Control btnAceptarSendError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAceptarSendError;
+        
+        /// <summary>
+        /// Control lblOculto2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOculto2;
+        
+        /// <summary>
+        /// Control mpeSendError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender mpeSendError;
     }
 }

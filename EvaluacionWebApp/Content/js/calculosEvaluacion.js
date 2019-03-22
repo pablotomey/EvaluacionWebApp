@@ -384,7 +384,7 @@ function lipGrInicial() {
     lipGr = parseFloat(energia * (lipPorc / 100)) / 9;
 
     if (isNaN(lipGr)) {
-        choGr = 0;
+        lipGr = 0;
     } else if (lipGr === Infinity) {
         lipGr = 0;
     }

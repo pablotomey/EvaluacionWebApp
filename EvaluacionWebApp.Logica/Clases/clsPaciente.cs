@@ -73,7 +73,6 @@ namespace EvaluacionWebApp.Logica.Clases
                                                                  SexoPaciente = patients.sexo,
                                                                  diagnosticoPaciente = patients.diagnostico,
                                                                  numFicha=patients.ficha_medica,
-                                                                 estadoPaciente=patients.estado,
                                                                  FechaCreacion=patients.fecha_creacion,
                                                                  usuario=users.nombre+" "+users.apepat
                                                              }).ToList();

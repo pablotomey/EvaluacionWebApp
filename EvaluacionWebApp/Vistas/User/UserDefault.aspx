@@ -37,10 +37,9 @@
                                         <asp:BoundField DataField="SexoPaciente" HeaderText="Sexo" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
                                         <asp:BoundField DataField="diagnosticoPaciente" HeaderText="Diagnostico" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
                                         <asp:BoundField DataField="numFicha" HeaderText="Ficha" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
-                                        <asp:BoundField DataField="estadoPaciente" HeaderText="Estado" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
                                         <asp:BoundField DataField="FechaCreacion" HeaderText="Creación" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
                                         <asp:BoundField DataField="usuario" HeaderText="Nutricionista" HeaderStyle-Font-Size="Smaller" ItemStyle-Font-Size="Smaller" />
-                                        <asp:TemplateField HeaderText="Evaluacion" HeaderStyle-Font-Size="Smaller">
+                                        <asp:TemplateField HeaderText="Evaluación" HeaderStyle-Font-Size="Smaller">
                                             <ItemTemplate>
                                                 <asp:ImageButton runat="server" ID="btnEvaluacion" ImageUrl="~/Content/img/Evaluacion.png" CommandName="Evaluacion" CommandArgument="<%#((GridViewRow) Container).RowIndex %>" />
                                             </ItemTemplate>

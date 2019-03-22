@@ -69,14 +69,14 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h6 class="white-text">Desarrollado por:</h6>
-                    <p class="grey-text text-lighten-4">Pablo Tomey, Monica Alvarez, Cristian Jara</p>
+                    <p class="grey-text text-lighten-4">Pablo Tomey</p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright blue-grey darken-4">
             <div class="container">
-                © 2018 Nutrideath
-                <a class="grey-text text-lighten-4 right" href="#!">Inacap</a>
+                © 2018 Punta Arenas
+                <a class="grey-text text-lighten-4 right" href="#!">Hospital clínico Magallanes</a>
             </div>
         </div>
     </footer>        
