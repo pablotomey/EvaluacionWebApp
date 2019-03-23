@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="EvaluacionWebApp.Vistas.UserMaster" %>
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="EvaluacionWebApp.Vistas.UserMaster" %>--%>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="/Vistas/Admin/AdminDefault.aspx"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSession"></asp:Label></a></li>
+                        <li><a href="/Vistas/User/UserDefault.aspx"><i class="material-icons left">account_circle</i><asp:Label runat="server" ID="lblUserSession"></asp:Label></a></li>
                     </ul>
                 </div>
             </nav>
