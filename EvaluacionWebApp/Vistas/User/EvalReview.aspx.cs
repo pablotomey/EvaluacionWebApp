@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using EvaluacionWebApp.Logica.Clases;
 using EvaluacionWebApp.Logica.ModeloEntidades;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
 
 namespace EvaluacionWebApp.Vistas.User
 {
@@ -37,7 +42,7 @@ namespace EvaluacionWebApp.Vistas.User
         {
             clsPaciente paciente = new clsPaciente();
             
-            // guardamos en una vaiable el string que devuelve el metodo validar rut
+            // guardamos en una variable el string que devuelve el metodo validar rut
             String rut = paciente.validarRut(txtRutFind.Text);
 
             if (rut.Equals("Rut invalido"))
@@ -57,31 +62,39 @@ namespace EvaluacionWebApp.Vistas.User
                 // Si el rut es valido validamos en la base de datos si esta registrado
                 try
                 {
-                    using (db_nutricionEntities dbentity = new db_nutricionEntities())
+                    using (
+                        db_nutricionEntities dbentity = new db_nutricionEntities())
                     {
                         List<int?> rutPat = (from pat in dbentity.Pacientes
-                                                 select pat.rut).ToList();
+                                             select pat.rut).ToList();
+
+                        List<String> estadoPat = (from pat in dbentity.Pacientes
+                                                  select pat.estado).ToList();
                         bool rutMatch = false;
-                        foreach(var findRut in rutPat)
+                        bool estadoMatch = false;
+                        foreach (var findRut in rutPat)
                         {
                             if (findRut == rutPaciente)
                             {
-                                rutMatch = true;
-                                break;
-                            }
-                            else
-                            {
-                                rutMatch = false;
+                                foreach (var findEstado in estadoPat)
+                                {
+                                    if (findEstado == "activo")
+                                    {
+                                        rutMatch = true;
+                                        estadoMatch = true;
+                                        break;
+                                    }
+                                }
                             }
                         }
 
-                        if (rutMatch)
+                        if (rutMatch && estadoMatch)
                         {
-                            String nomPaciente = (from pat in dbentity.Pacientes
-                                                  where pat.rut == rutPaciente
-                                                  select pat.nombre + " " + pat.apepat).First();
+                            grdPaciente.DataSource = paciente.mostrarPacienteEvaluado(rutPaciente);
+                            grdPaciente.DataBind();
+                            lblTitlePaciente.Visible = true;
 
-                            lblPacienteFind.Text = "Paciente: " + nomPaciente; // llenamos el label con el nombre del paciente mediante la consulta a la BD
+                            btnExportPDF.Visible = true;
                         }
                         else
                         {
@@ -129,6 +142,36 @@ namespace EvaluacionWebApp.Vistas.User
                 grdObservacion.DataBind();
                 lblTitleObs.Visible = true;
             }           
+        }
+
+        protected void ExportarPDF(object sender, EventArgs e)
+        {
+            Response.ContentType = "aplication/pdf";
+            Response.AddHeader("content-disposition", "attachment;filename=Evaluacion.pdf");
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter hw = new HtmlTextWriter(sw);
+
+            panelPDF.RenderControl(hw);
+            StringReader sr = new StringReader(sw.ToString());
+            Document docPDF = new Document(PageSize.LETTER,10f,10f,10f,10f);
+            PdfWriter writer= PdfWriter.GetInstance(docPDF, Response.OutputStream);
+
+            docPDF.Open();
+            //iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance("../../EvaluacionWebApp/Content/img/Logo_Hospital.png");
+            //docPDF.Add(img);
+            XMLWorkerHelper.GetInstance().ParseXHtml(writer, docPDF, sr);
+            docPDF.Close();
+
+            Response.Write(docPDF);
+            Response.End();
+
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            return;
         }
     }
 }

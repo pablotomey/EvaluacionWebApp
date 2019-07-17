@@ -53,6 +53,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -119,6 +125,7 @@
     <Content Include="Content\js\materialize.js" />
     <Content Include="Content\js\materialize.min.js" />
     <Content Include="Vistas\Login.aspx" />
+    <Content Include="Vistas\User\AdminPatients.aspx" />
     <Content Include="Vistas\User\EvalReview.aspx" />
     <Content Include="Vistas\User\Evaluacion.aspx" />
     <Content Include="Vistas\User\UserDefault.aspx" />
@@ -172,6 +179,13 @@
     </Compile>
     <Compile Include="Vistas\UserMaster.Master.designer.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\User\AdminPatients.aspx.cs">
+      <DependentUpon>AdminPatients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\User\AdminPatients.aspx.designer.cs">
+      <DependentUpon>AdminPatients.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\User\EvalReview.aspx.cs">
       <DependentUpon>EvalReview.aspx</DependentUpon>

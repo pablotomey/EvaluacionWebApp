@@ -40,13 +40,40 @@ namespace EvaluacionWebApp.Vistas.User {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnRutFind;
         
         /// <summary>
-        /// Control lblPacienteFind.
+        /// Control panelPDF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPacienteFind;
+        protected global::System.Web.UI.WebControls.Panel panelPDF;
+        
+        /// <summary>
+        /// Control lblTitlePaciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitlePaciente;
+        
+        /// <summary>
+        /// Control upPaciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upPaciente;
+        
+        /// <summary>
+        /// Control grdPaciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdPaciente;
         
         /// <summary>
         /// Control lblTitleAntr.
@@ -263,5 +290,14 @@ namespace EvaluacionWebApp.Vistas.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdObservacion;
+        
+        /// <summary>
+        /// Control btnExportPDF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnExportPDF;
     }
 }

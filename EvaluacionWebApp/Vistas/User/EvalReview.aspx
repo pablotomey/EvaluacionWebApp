@@ -18,8 +18,32 @@
             <button runat="server" id="btnRutFind" class="waves-effect waves-light btn orange darken-1" onserverclick="btnRutFind_Click"><i class="material-icons right">search</i>Buscar Evaluación</button>
         </div>
         <div class="section"></div>
+        <asp:Panel ID="panelPDF" runat="server" CssClass="striped">
         <div class="row">
-            <h6><asp:Label runat="server" ID="lblPacienteFind"></asp:Label></h6>           
+            <h5><asp:Label runat="server" ID="lblTitlePaciente" Visible="false">Paciente</asp:Label></h5>
+        </div>
+        <div class="row">
+            <asp:UpdatePanel ID="upPaciente" runat="server" UpdateMode="Always">
+                <ContentTemplate>
+                    <asp:GridView runat="server" ID="grdPaciente" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
+                        <Columns>
+                            <asp:TemplateField HeaderText="N° Pac">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblIdPaciente" runat="server" Text='<%# Bind("id_paciente") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="nombrePaciente" HeaderText="Nombre" />
+                            <asp:BoundField DataField="rutPaciente" HeaderText="Rut"  />
+                            <asp:BoundField DataField="edadPaciente" HeaderText="Edad" />
+                            <asp:BoundField DataField="sexoPaciente" HeaderText="Sexo" />
+                            <asp:BoundField DataField="diagnosticoPaciente" HeaderText="Diagnóstico" />
+                            <asp:BoundField DataField="numFicha" HeaderText="Nº Ficha" />
+                            <asp:BoundField DataField="fechaCreacion" HeaderText="Ingreso" />
+                            <asp:BoundField DataField="usuario" HeaderText="Profesional" />
+                        </Columns>
+                    </asp:GridView>
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
         <div class="row">
             <h5><asp:Label runat="server" ID="lblTitleAntr" Visible="false">Antropometria</asp:Label></h5>
@@ -27,7 +51,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upAntropometria" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdAntropometria" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdAntropometria" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -51,7 +75,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upComposicion" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdComposicion" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdComposicion" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -80,7 +104,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upExamenes" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdExamenes" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdExamenes" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -112,7 +136,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upDiagnostico" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdDiagnostico" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdDiagnostico" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -131,7 +155,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upReqInicial" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdReqInicial" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdReqInicial" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="Id">
                                 <ItemTemplate>
@@ -160,7 +184,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upReqFinal" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdReqFinal" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdReqFinal" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="Id">
                                 <ItemTemplate>
@@ -189,7 +213,7 @@
         <div class="row">
             <asp:UpdatePanel ID="upMetaNutr" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdMetaNutr" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdMetaNutr" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -208,7 +232,7 @@
         <div class="row">
             <asp:UpdatePanel ID="opObservacion" runat="server" UpdateMode="Always">
                 <ContentTemplate>
-                    <asp:GridView runat="server" ID="grdObservacion" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros">
+                    <asp:GridView runat="server" ID="grdObservacion" CssClass="striped" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" Font-Size="Smaller">
                         <Columns>
                             <asp:TemplateField HeaderText="N° Eval">
                                 <ItemTemplate>
@@ -220,6 +244,10 @@
                     </asp:GridView>
                 </ContentTemplate>
             </asp:UpdatePanel>
+        </div>
+        </asp:Panel>
+        <div class="row">
+            <button runat="server" id="btnExportPDF" class="waves-effect waves-light btn red darken-4" visible="false" onserverclick="ExportarPDF"><i class="material-icons right">picture_as_pdf</i>Exportar PDF</button>
         </div>
     </div>
 </asp:Content>

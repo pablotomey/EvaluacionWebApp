@@ -1,4 +1,4 @@
-﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="EvaluacionWebApp.Vistas.UserMaster" %>--%>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="EvaluacionWebApp.Vistas.UserMaster" %>
 
 <!DOCTYPE html>
 
@@ -46,7 +46,7 @@
         </li>
         <li><a href="/Vistas/User/UserDefault.aspx" class="waves-effect waves-teal"><i class="material-icons">home</i>Inicio</a></li>
         <li><a href="/Vistas/User/EvalReview.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment</i>Revisar Evaluaciones</a></li>
-        <li><a href="#!" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
+        <li><a href="/Vistas/User/AdminPatients.aspx" class="waves-effect waves-teal"><i class="material-icons">assignment_ind</i>Administrar Pacientes</a></li>
         <li><a href="#!" class="waves-effect waves-teal" runat="server" onserverclick="cerrarSession"><i class="material-icons">power_settings_new</i>Salir</a></li>
     </ul>
     <main>

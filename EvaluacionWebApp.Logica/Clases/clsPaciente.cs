@@ -73,6 +73,7 @@ namespace EvaluacionWebApp.Logica.Clases
                                                                  SexoPaciente = patients.sexo,
                                                                  diagnosticoPaciente = patients.diagnostico,
                                                                  numFicha=patients.ficha_medica,
+                                                                 estadoPaciente=patients.estado,
                                                                  FechaCreacion=patients.fecha_creacion,
                                                                  usuario=users.nombre+" "+users.apepat
                                                              }).ToList();
@@ -85,6 +86,93 @@ namespace EvaluacionWebApp.Logica.Clases
 
                 throw ex;
             }
+        }
+
+        public List<PacientesInterface> mostrarPacienteEvaluado(int rutPaciente)
+        {
+            try
+            {
+                using(db_nutricionEntities dbEntity = new db_nutricionEntities())
+                {
+                    List<PacientesInterface> queryPaciente = (from patients in dbEntity.Pacientes
+                                                              from user in dbEntity.Usuarios
+                                                              where patients.rut == rutPaciente
+                                                              where patients.estado == "activo"
+                                                              where patients.id_usuario == user.id_usuario
+                                                              select new PacientesInterface
+                                                              {
+                                                                  id_paciente = patients.id_paciente,
+                                                                  nombrePaciente = patients.nombre + " " + patients.apepat,
+                                                                  //apepatPaciente = patients.apepat,
+                                                                  //apematPaciente = patients.apemat,
+                                                                  rutPaciente = patients.rut,
+                                                                  edadPaciente = patients.edad,
+                                                                  SexoPaciente = patients.sexo,
+                                                                  diagnosticoPaciente = patients.diagnostico,
+                                                                  numFicha = patients.ficha_medica,
+                                                                  FechaCreacion = patients.fecha_creacion,
+                                                                  usuario = user.nombre + " " + user.apepat
+                                                              }).ToList();
+                    return queryPaciente;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public String modificarPaciente(int idPaciente,String nombrePaciente,String apepat, String apemat, int edad, String sexo, String diagnostico)
+        {
+            try
+            {
+                using (db_nutricionEntities dbEntity = new db_nutricionEntities())
+                {
+                    Pacientes paciente = (from patients in dbEntity.Pacientes
+                                          where patients.id_paciente == idPaciente
+                                          select patients).First();
+
+                    paciente.nombre = nombrePaciente;
+                    paciente.apepat = apepat;
+                    paciente.apemat = apemat;
+                    paciente.edad = edad;
+                    paciente.sexo = sexo;
+                    paciente.diagnostico = diagnostico;
+                    dbEntity.SaveChanges();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return "Paciente módificado";
+        }
+
+        public String desactivarPaciente(int idPaciente)
+        {
+            try
+            {
+                using(db_nutricionEntities dbEntity = new db_nutricionEntities())
+                {
+                    Pacientes paciente = (from patients in dbEntity.Pacientes
+                                          where patients.id_paciente == idPaciente
+                                          select patients).First();
+
+                    paciente.estado = "inactivo";
+                    dbEntity.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return "Paciente dado de alta";
         }
         /**
          * Metodo para realizar la validacion del rut del paciente.
