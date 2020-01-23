@@ -1,5 +1,5 @@
 # EvaluacionWebApp
-Web app para Evaluaciones nutriciones del hospital clínico Magallanes
+Web app para Evaluaciones nutricionales del Hospital Clínico Magallanes
 
 Aplicación web Responsiva para realizar evaluaciones nutricionales a los pacientes del área de nutrición del Hospital Clínico Magallanes, XII Región de Chile.
 
